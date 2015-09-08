@@ -143,7 +143,7 @@ function generateCity(){
         //scale of building
         buildingMesh.scale.x  = Math.random()*Math.random()*Math.random()*Math.random() * 5 + 5;
         buildingMesh.scale.y  = buildingMesh.scale.x;
-        buildingMesh.scale.z  = (Math.random() * Math.random() * Math.random() * buildingMesh.scale.x) * 4 + 5;
+        buildingMesh.scale.z  = (Math.random() * Math.random() * Math.random() * buildingMesh.scale.x) * 6 + 5;
         THREE.GeometryUtils.merge( cityGeometry, buildingMesh );
     }
         

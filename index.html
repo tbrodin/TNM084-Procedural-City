@@ -188,7 +188,7 @@
   void main() {
 
     //displacement level 1
-    float amp = 8.0;
+    float amp = 2.0;
     float freq = 0.1;
     float speed = 0.5;
 
@@ -462,7 +462,7 @@
   void main() {
 
  //displacement level 1
-    float amp = 8.0;
+    float amp = 2.0;
     float freq = 0.1;
     float speed = 0.5;
 
@@ -474,6 +474,10 @@
     //displacement += amp2 * pnoise( freq2 * position + vec3( time / 2.0 ), vec3( 50.0 ) );
     //displacement = max(0.0, displacement);
 
+    //This hardcoded stuff makes only the bottoms of the boxes to follow the noise
+    if(position.z > -10.0)
+        displacement = 0.0;
+      
 
     newPosition =  position + vec3(0.0,0.0,1.0) * displacement;
 
